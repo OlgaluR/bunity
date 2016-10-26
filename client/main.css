@@ -1,0 +1,27 @@
+/* CSS declarations go here */
+
+.corrido {margin-right: 60px;}
+.fondo {background-color:#E8E9EE;}
+.haspadding{ padding: 20px 20px 20px 20px; }
+.destacado {color: #3B62B5;}
+.destacado:after {
+
+  content: "";
+
+  display: block;
+
+  border-top: 4.5px solid #3B62B5;
+
+  border-bottom: 4.5px solid #3B62B5;
+
+  width: 120px;
+
+  border-radius: 12px;
+
+  margin-top: 20px;
+
+  margin-bottom: 0px;
+
+}
+.slogan {color: #3B62B5;}
+.picture {max-height: 240px;}
