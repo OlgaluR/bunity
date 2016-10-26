@@ -25,3 +25,9 @@
 }
 .slogan {color: #3B62B5;}
 .picture {max-height: 240px;}
+div.scroll {
+    background-color: #00FFFF;
+    width: 200px;
+    height: 150px;
+    overflow: scroll;
+}
