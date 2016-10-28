@@ -25,9 +25,38 @@
 }
 .slogan {color: #3B62B5;}
 .picture {max-height: 240px;}
+
 div.scroll {
-    background-color: #00FFFF;
-    width: 200px;
-    height: 150px;
+    background-color: white;
+    margin-top: 5px;
+    max-width: 450px;
+    max-height: 350px;
+    border: solid 1px;
+    padding: 5px 5px 5px 5px;
     overflow: scroll;
+    resize: both;
+}
+.compact{
+  font-size: 90%;
+  background-color: #FFFF73;
+  margin-bottom: 2px;
+
+}
+div.scroll2 {
+    background-color: white;
+    margin-top: 5px;
+    max-width: 450px;
+    max-height: 350px;
+    border: solid 1px;
+    padding: 5px 5px 5px 5px;
+    overflow: scroll;
+    resize: both;
+}
+.compact2{
+  font-size: 90%;
+  background-color: #BFFFFF;
+  margin-bottom: 2px;
+}
+.thumbnail-img{
+  max-height:200px;
 }

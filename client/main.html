@@ -1,75 +1,10 @@
+<template name="ApplicationLayout">
 <head>
-  <title>bunity</title>
+    <title>bunity</title>
 </head>
 
-<body>
-  {{> mainheader}}
-  {{> info}}
-</body>
+    {{> yield "header"}}
 
-<template name="mainheader">
-  <header role="banner">
-    <div class="container">
-      <a class="banner-brand visible-md visible-lg" href="#"><img src="bunity.png" alt="Bunity" width="200"></a>
-      <p class="navbar-text navbar-right">
-        {{>loginButtons align="right"}}
-      </p>
-    </div>
-    <div class="container">
-    {{# if currentUser}}
-      <nav role="navigation" class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand visible-xs visible-sm" href="#"><img src="bunity.png" alt="Bunity" width="120"></a>
-          </div>        
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="#"> Master Data</a></li>
-              <li><a href="#"> My next shopping</a></li>
-              <li><a href="#"> My profile</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!--/.container -->
-      </nav>
-    {{else}}
-      <h4 class="destacado"> Login or register and begin doing your shopping intelligently!</h4>
-    {{/if}}
-    </div> <!--/.container de nav -->
-  </header>
-</template>
+    {{> yield "main"}}
 
-<template name="info">
-  <main role="main">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-6">
-          <h2>Welcome to Bunity</h2>
-          <h3> The most usefull buyer community!</h3><br>
-          <h4 class="slogan"> Plan and do the shopping with fun and do the most out of your money</h4>
-        </div>
-        <div class="col-xs-12 col-md-6">
-          <img class="img-responsive picture" src="happy_buyer.jpg" alt="happy buyer">
-        </div>
-      </div> <!--/ row -->
-       <div class="row">
-          <div class="col-xs-12 col-md-6">
-            <div class="scroll">
-              <p> este es el item no 1 <a href="#">X</a></p>
-              <p> este es elddd item no 2 <a href="#">X</a></p>
-              <p> este es el item no 3 <a href="#">X</a></p>
-              <p> este es el item no 4 <a href="#">X</a></p>
-              <p> este es el idddtem no 5 <a href="#">X</a></p>
-              <p> este es el item no 6 <a href="#">X</a></p>
-              <p> este es el item no 7 <a href="#">X</a></p>
-            </div>
-          </div>
-       </div> <!--/ row -->
-
-    </div>
-  </main>
 </template>

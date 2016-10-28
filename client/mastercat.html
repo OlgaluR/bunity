@@ -1,0 +1,65 @@
+<template name="mastercat">  
+ <div class="container">
+  <button type="button" class="btn btn-info btn-xs">Search <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+  <button type="button" class="btn btn-info btn-xs">Filter by category <span class="glyphicon glyphicon-filter" aria-hidden="true"></span></button>
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <h4> Products Catalogue </h4>
+      <div class="scroll">
+        {{#each products}}
+          <p class="compact"> {{Description}} <a class="js-addtolist" href="#" rel="tooltip" title="Add to my selection"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+          <a class="js-product-info" href="#" rel="tooltip" title="Details"><span class="glyphicon glyphicon-info-sign" aria-hidden="true" ></span></a>
+          
+          </p>
+        {{/each}}
+      </div>
+    </div>
+  
+
+    <div class="col-xs-12 col-md-6">
+      <h4> My selection of products </h4>
+      <div class="scroll2">
+        {{#each myproducts}}
+          <p class="compact2"> {{Description}} <a class="js-delfromlist" href="#" rel="tooltip" title="Delete from my selection"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></p>
+        {{/each}}
+      </div>
+    </div>
+  </div> <!--/ row -->     
+ </div>
+
+<div class="modal fade" id="product_detail">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">
+        <h4> Product details </h4>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">  
+          <div class="row">    
+            <p>Description: {{document.Description}} </p>
+            <p>Category: {{document.Category}} </p>
+            <br>
+          </div> <!--/ row -->
+          <div class="row">
+            <img class="thumbnail-img"  src="{{document.Picture}}" alt="{{document.Description}}"/>
+            <form class="js-add-image">
+              <div class="form-group">
+                <label for="img_src">Image URL:</label>
+                <input type="text" class="form-control" id="img_src" placeholder="url" name="img_src"/>
+              </div>
+              <button class="btn btn-success">Add a picture <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+            </form> 
+          </div> <!--/ row -->
+        </div>  <!-- container -->  
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-warning" data-dismiss="modal">cerrar</button>
+      </div>  
+      </div>
+    </div>
+  </div>
+
+
+</template>

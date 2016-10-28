@@ -1,0 +1,36 @@
+<template name="mainheader">
+  <header role="banner">
+    <div class="container">
+      <a class="banner-brand visible-md visible-lg" href="./"><img src="bunity.png" alt="Bunity" width="200"></a>
+      <p class="navbar-text navbar-right">
+        {{>loginButtons align="right"}}
+      </p>
+    </div>
+    <div class="container">
+    {{# if currentUser}}
+      <nav role="navigation" class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand visible-xs visible-sm" href="#"><img src="bunity.png" alt="Bunity" width="120"></a>
+          </div>        
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/catalogue"> Catalogue</a></li>
+              <li><a href="#"> My next shopping</a></li>
+              <li><a href="#"> My profile</a></li>
+              <li><a href="#"> Family members</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container -->
+      </nav>
+    {{else}}
+      <h4 class="destacado"> Login or register and begin doing your shopping intelligently!</h4>
+    {{/if}}
+    </div> <!--/.container de nav -->
+  </header>
+</template>
